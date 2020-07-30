@@ -171,7 +171,7 @@ export class ReactTelephoneInput extends Component<Props, State> {
       return state;
     }
 
-    if (props.value) {
+    if (props.value || typeof props.value === "string") {
       inputNumber = props.value;
     } else if (props.initialValue && state.firstCall) {
       inputNumber = props.initialValue;
